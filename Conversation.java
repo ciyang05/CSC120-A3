@@ -7,6 +7,8 @@ class Conversation implements Chatbot {
 
   // Attributes
   
+  ArrayList <String> canned = new ArrayList <String>();
+
 
   /**
    * Constructor 
