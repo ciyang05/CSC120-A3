@@ -1,4 +1,3 @@
-import java.util.Scanner;
 import java.util.*;
 import java.util.function.Supplier;
 
@@ -12,7 +11,13 @@ class Conversation implements Chatbot {
 
   /**
    * Constructor 
+   *
    */
+
+   public Conversation(ArrayList<String> canned){
+    this.canned = canned;
+   }
+   
   Conversation() {
     
     
