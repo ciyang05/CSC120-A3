@@ -1,5 +1,6 @@
 import java.util.*;
 import java.util.function.Supplier;
+import java.util.Scanner;
 
 
 class Conversation implements Chatbot {
@@ -7,8 +8,8 @@ class Conversation implements Chatbot {
   // Attributes
   
   ArrayList <String> canned = new ArrayList <String>();
-  String answer;
-  int rounds;
+  int answer;
+  Scanner rounds;
 
 
   /**
@@ -16,13 +17,13 @@ class Conversation implements Chatbot {
    *
    */
 
-   public Conversation(ArrayList<String> canned, String a, int roun){
+   public Conversation(ArrayList<String> canned, int a, Scanner rounds){
     this.canned = canned;
-    this.canned.add("Uh-huh");
-    this.canned.add("See you later!");
-    this.canned.add("Bye, bye!");
+    canned.add("Uh-huh");
+    canned.add("See you later!");
+    canned.add("Bye, bye!");
     this.answer = a;
-    this.rounds = roun;
+    this.rounds = rounds;
    }
 
   Conversation() {
@@ -33,7 +34,9 @@ class Conversation implements Chatbot {
    * Starts and runs the conversation with the user
    */
   public void chat() {
-
+    rounds = new Scanner(System.rounds);
+    System.out.println("How many rounds would you like to do?");
+    answer = rounds.nextInt(); 
   }
 
   /**
