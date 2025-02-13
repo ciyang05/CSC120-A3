@@ -1,12 +1,18 @@
+import java.util.Scanner;
+import java.util.*;
+import java.util.function.Supplier;
+
 
 class Conversation implements Chatbot {
 
-  // Attributes 
+  // Attributes
+  
 
   /**
    * Constructor 
    */
   Conversation() {
+    
     
   }
 
