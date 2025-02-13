@@ -8,6 +8,7 @@ class Conversation implements Chatbot {
   
   ArrayList <String> canned = new ArrayList <String>();
   String answer;
+  int rounds;
 
 
   /**
@@ -15,11 +16,12 @@ class Conversation implements Chatbot {
    *
    */
 
-   public Conversation(ArrayList<String> canned, String a){
+   public Conversation(ArrayList<String> canned, String a, int roun){
     this.canned = canned;
     this.answer = a;
+    this.rounds = roun;
    }
-   
+
   Conversation() {
     
     
