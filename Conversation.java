@@ -18,12 +18,14 @@ class Conversation implements Chatbot {
 
    public Conversation(ArrayList<String> canned, String a, int roun){
     this.canned = canned;
+    canned.add("Uh-huh");
+    canned.add("See you later!");
+    canned.add("Bye, bye!");
     this.answer = a;
     this.rounds = roun;
    }
 
   Conversation() {
-    
     
   }
 
