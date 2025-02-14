@@ -9,7 +9,7 @@ class Conversation implements Chatbot {
   
   ArrayList <String> canned = new ArrayList <String>();
   int answer;
-  Scanner rounds;
+  String rounds;
 
 
   /**
@@ -17,13 +17,12 @@ class Conversation implements Chatbot {
    *
    */
 
-   public Conversation(ArrayList<String> canned, int a, Scanner rounds){
+   public Conversation(ArrayList<String> canned, int a){
     this.canned = canned;
     canned.add("Uh-huh");
     canned.add("See you later!");
     canned.add("Bye, bye!");
     this.answer = a;
-    this.rounds = rounds;
    }
 
   Conversation() {
@@ -34,9 +33,10 @@ class Conversation implements Chatbot {
    * Starts and runs the conversation with the user
    */
   public void chat() {
-    rounds = new Scanner(System.rounds);
+    Scanner scanner = new Scanner(System.in);
     System.out.println("How many rounds would you like to do?");
-    answer = rounds.nextInt(); 
+    rounds = scanner.nextLine();
+    }
   }
 
   /**
