@@ -1,6 +1,5 @@
 import java.util.*;
 import java.util.function.Supplier;
-import java.util.Scanner;
 
 
 class Conversation implements Chatbot {
@@ -27,7 +26,7 @@ class Conversation implements Chatbot {
   // the class and is where scanner would go 
   
   Conversation() {
-    
+    Scanner input = new Scanner(System.in);
   }
 
   /**

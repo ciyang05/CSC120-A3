@@ -45,8 +45,8 @@ _____ (Kudos!) Generates output with correct punctuation & capitalization
 _____ (Kudos!) Handles you --> me/I dilemma
 
 
-
 ## General Items:
+
 
 _____ 4 pts: Programs implement interfaces and compile without errors or warnings
 
