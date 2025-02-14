@@ -7,9 +7,10 @@ class Conversation implements Chatbot {
 
   // Attributes
   
-  ArrayList <String> canned = new ArrayList <String>();
-  int answer;
-  String rounds;
+  String[] canned; // stores canned responses - has to be static!! change it!!
+  ArrayList <String> transcript; // where the entire conversation will be stored
+  // Scanner input = new Scanner (System.in); // creates a Scanner object
+  Scanner input;
 
 
   /**
@@ -17,30 +18,41 @@ class Conversation implements Chatbot {
    *
    */
 
-   public Conversation(ArrayList<String> canned, int a){
-    this.canned = canned;
+   public Conversation(ArrayList<String> responses, ArrayList<String> text){
+    this.canned = responses;
     canned.add("Uh-huh");
     canned.add("See you later!");
     canned.add("Bye, bye!");
-    this.answer = a;
+    this.transcript = text;
+    this.input = new Scanner (System.in);
    }
 
+  // the class and is where scanner would go 
+  
   Conversation() {
     
   }
 
   /**
    * Starts and runs the conversation with the user
+   * Gets the transcript running 
    */
   public void chat() {
-    Scanner scanner = new Scanner(System.in);
-    System.out.println("How many rounds would you like to do?");
-    rounds = scanner.nextLine();
+    
+    // prints welcome message and asks user how many rounds wanted 
+    System.out.println("Welcome to the chatbot! How many rounds would you like to do?");
+    // gets answer from user about number of rounds 
+    int rounds = input.nextInt();
+
+
+
+  
     }
   }
 
   /**
    * Prints transcript of conversation
+   * Would loop over and print out each statement in the arrayList transcript
    */
   public void printTranscript() {
 
@@ -57,7 +69,6 @@ class Conversation implements Chatbot {
   }
 
   public static void main(String[] arguments) {
-
     Conversation myConversation = new Conversation();
     myConversation.chat();
     myConversation.printTranscript();
