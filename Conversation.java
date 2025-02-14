@@ -7,7 +7,7 @@ class Conversation implements Chatbot {
 
   // Attributes
   
-  String[] canned; // stores canned responses - has to be static!! change it!!
+  static String[] canned; // stores canned responses - has to be static!! change it!!
   ArrayList <String> transcript; // where the entire conversation will be stored
   // Scanner input = new Scanner (System.in); // creates a Scanner object
   Scanner input;
@@ -18,11 +18,11 @@ class Conversation implements Chatbot {
    *
    */
 
-   public Conversation(ArrayList<String> responses, ArrayList<String> text){
-    this.canned = responses;
-    canned.add("Uh-huh");
-    canned.add("See you later!");
-    canned.add("Bye, bye!");
+   public Conversation(ArrayList<String> text){
+    static String[] canned = new String[3];
+    this.canned.add("Uh-huh");
+    this.canned.add("See you later!");
+    this.canned.add("Bye, Bye!");
     this.transcript = text;
     this.input = new Scanner (System.in);
    }
