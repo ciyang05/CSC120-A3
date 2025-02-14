@@ -37,10 +37,9 @@ class Conversation implements Chatbot {
     
     // prints welcome message and asks user how many rounds wanted 
     System.out.println("Welcome to the chatbot! How many rounds would you like to do?");
-    // gets answer from user about number of rounds 
     int rounds = input.nextInt();
-
-
+    // gets answer from user about number of rounds 
+  
 
   
     }
@@ -70,4 +69,4 @@ class Conversation implements Chatbot {
     myConversation.printTranscript();
 
   }
-}
+
