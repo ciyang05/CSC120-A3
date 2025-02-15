@@ -8,7 +8,7 @@ class Conversation implements Chatbot {
 
   // Attributes
   
-  static String[] responses = {"Uh-huh", "Bye, bye!", "See you later!"}; // will store the canned responses 
+  String[] responses; // will store the canned responses 
   ArrayList <String> transcript; // where the entire conversation will be stored
   Scanner input;
 
@@ -21,6 +21,7 @@ class Conversation implements Chatbot {
    public Conversation(ArrayList<String> text){
     this.transcript = text;
     this.input = new Scanner (System.in);
+    this.responses = new String[] {"See you later!", "Bye, bye!", "Uh-huh"};
    }
 
   // the class and is where scanner would go 
