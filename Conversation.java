@@ -48,18 +48,14 @@ class Conversation implements Chatbot {
     transcript.add(thought1);
     System.out.println(question);
     
-    
-    int counter = 0;
-    while (rounds >= counter){
-      String thought_1 = input.nextLine();
-      transcript.add(thought_1);
-
+    int counter = 0
+    while (rounds >= 0){
+      
     }
 
 
+
     // Begins conversation
-    System.out.println("What is on your mind right now:" + " ");
-    String thought = input.nextLine();
       }
   }
 
