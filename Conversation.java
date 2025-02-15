@@ -1,14 +1,15 @@
 import java.util.*;
 import java.util.function.Supplier;
+import java.util.Scanner;
+import java.util.ArrayList;
 
 
 class Conversation implements Chatbot {
 
   // Attributes
   
-  String[] responses;
+  String[] responses = {"Uh-huh", "Bye, bye!", "See you later!"}; // will store the canned responses 
   ArrayList <String> transcript; // where the entire conversation will be stored
-  // Scanner input = new Scanner (System.in); // creates a Scanner object
   Scanner input;
 
 
@@ -18,7 +19,6 @@ class Conversation implements Chatbot {
    */
 
    public Conversation(ArrayList<String> text){
-    String[] responses = {"Uh-huh", "See you later!", "Bye, Bye!"};
     this.transcript = text;
     this.input = new Scanner (System.in);
    }
@@ -26,7 +26,7 @@ class Conversation implements Chatbot {
   // the class and is where scanner would go 
   
   Conversation() {
-    Scanner input = new Scanner(System.in);
+
   }
 
   /**
