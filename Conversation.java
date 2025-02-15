@@ -8,7 +8,7 @@ class Conversation implements Chatbot {
 
   // Attributes
   
-  String[] responses = {"Uh-huh", "Bye, bye!", "See you later!"}; // will store the canned responses 
+  static String[] responses = {"Uh-huh", "Bye, bye!", "See you later!"}; // will store the canned responses 
   ArrayList <String> transcript; // where the entire conversation will be stored
   Scanner input;
 
