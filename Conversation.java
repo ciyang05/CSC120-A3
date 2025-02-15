@@ -44,13 +44,12 @@ class Conversation implements Chatbot {
     // loop over to ask about thoughts depending on rounds given by using a counter
     String question = ("What is on your mind? ");
     transcript.add(question);
-    String thought1 = input.nextLine();
-    transcript.add(thought1);
     System.out.println(question);
     
-    int counter = 0
+    int counter = 0;
     while (rounds >= 0){
-      
+      String thought = input.nextLine();
+      transcript.add(thought);
     }
 
 
