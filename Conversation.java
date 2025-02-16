@@ -42,7 +42,7 @@ class Conversation implements Chatbot {
     // gets answer from user about number of rounds, initializing the transcript array
     int rounds = input.nextInt(); 
     input.nextLine(); 
-    public static String[] transcript = new String[2 * rounds + 3];
+    String[] transcript = new String[2 * rounds + 3];
 
     // convert rounds to a string
     // adds welcome message and str rounds to transcript array in respective index
@@ -77,7 +77,12 @@ class Conversation implements Chatbot {
    * Would loop over and print out each statement in the arrayList transcript
    */
   public void printTranscript() {
-    System.out.println("\n" + "TRANSCRIPT" + "\n" + Arrays.toString(transcript));
+    System.out.println("\n" + "TRANSCRIPT:");
+    for (String line : transcript) {
+      if (line != null); {
+        System.out.println(line);
+      }
+    }
 
   }
 
