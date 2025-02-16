@@ -44,6 +44,7 @@ class Conversation implements Chatbot {
 
     // gets answer from user about number of rounds, initializing the transcript array
     int rounds = input.nextInt(); 
+    input.nextLine(); 
     String[] transcript = new String[2 * rounds + 3];
 
     // convert rounds to a string
