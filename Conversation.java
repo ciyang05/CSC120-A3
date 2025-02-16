@@ -2,6 +2,7 @@ import java.util.*;
 import java.util.function.Supplier;
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Random;
 
 
 class Conversation implements Chatbot {
@@ -9,19 +10,20 @@ class Conversation implements Chatbot {
   // Attributes
   
   String[] responses; // will store the canned responses 
-  ArrayList <String> transcript; // where the entire conversation will be stored
   Scanner input;
-
 
   /**
    * Constructor 
    *
    */
 
-   public Conversation(ArrayList<String> text){
-    this.transcript = text;
+   public Conversation() {
     this.input = new Scanner (System.in);
-    this.responses = new String[] {"See you later!", "Bye, bye!", "Uh-huh"};
+    this.responses = new String[] {"See you later!", 
+                                   "Bye, bye!", 
+                                   "Uh-huh",
+                                   "How interesting...",
+                                   "Sounds good."};
    }
 
   // the class and is where scanner would go 
@@ -36,16 +38,27 @@ class Conversation implements Chatbot {
    */
   public void chat() {
     
-    // prints welcome message and asks user how many rounds wanted 
-    System.out.println("Welcome to the chatbot! How many rounds would you like to do?" + " ");
-    // gets answer from user about number of rounds 
-    int rounds = input.nextInt();
-    
-    // loop over to ask about thoughts depending on rounds given by using a counter
+    // store welcome message in a variable, then print 
+    String welcome = ("Welcome to the chatbot! How many rounds of conversation would you like to do?");
+    System.out.println(welcome);
+
+    // gets answer from user about number of rounds, initializing the transcript array
+    int rounds = input.nextInt(); 
+    String[] transcript = new String[2 * rounds + 3];
+
+    // convert rounds to a string
+    // adds welcome message and str rounds to transcript array in respective index
+    String rounds_str = String.valueOf(rounds);
+    transcript[0] = (welcome);
+    transcript[1] = (rounds_str);
+
+    // asks user to give a thought, storing it in transcript array
     String question = ("What is on your mind? ");
-    transcript.add(question);
+    transcript[3] = (question);
     System.out.println(question);
-    
+
+
+    // loop over to ask about thoughts depending on rounds given by using a counter
     int counter = 0;
     while (rounds >= 0){
       String thought = input.nextLine();
