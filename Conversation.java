@@ -64,21 +64,22 @@ class Conversation implements Chatbot {
     while (rounds >= 0){
       counter ++;
       String thought = input.nextLine();
-      transcript[3] = (thought);
+      transcript[3 + counter * 2] = (thought);
       String Response1= thought.replaceAll("\\bI\\b", "you")
                                .replaceAll("\\bme\\b", "you")
                                .replaceAll("\\bam\\b", "are")
                                .replaceAll("\\bmy\\b", "your");
       System.out.println("\nOh you are thinking about" + " " + Response1 + " ");
+      transcript[4 + counter * 2] = (Response1);
 
-      System.out.println("Why are you thinking about" + " " + Response1 + ":" + " " );
-      String thought2 = input.nextLine();
-      transcript[4] = (thought2);
-      String Response2= thought2.replaceAll("\\bI\\b", "you")
-                                .replaceAll("\\bme\\b", "you")
-                                .replaceAll("\\bam\\b", "are")
-                                .replaceAll("\\bmy\\b", "your");
-      transcript[5] = (Response2);
+      // System.out.println("Why are you thinking about" + " " + Response1 + ":" + " " );
+      // String thought2 = input.nextLine();
+      // transcript[4] = (thought2);
+      // String Response2= thought2.replaceAll("\\bI\\b", "you")
+      //                           .replaceAll("\\bme\\b", "you")
+      //                           .replaceAll("\\bam\\b", "are")
+      //                           .replaceAll("\\bmy\\b", "your");
+      // transcript[5] = (Response2);
 
     }
 
