@@ -28,9 +28,9 @@ class Conversation implements Chatbot {
 
   // the class and is where scanner would go 
   
-  Conversation() {
+  //Conversation() {
 
-  }
+  //}
 
   /**
    * Starts and runs the conversation with the user
@@ -54,15 +54,31 @@ class Conversation implements Chatbot {
 
     // asks user to give a thought, storing it in transcript array
     String question = ("What is on your mind? ");
-    transcript[3] = (question);
+    transcript[2] = (question);
     System.out.println(question);
 
 
     // loop over to ask about thoughts depending on rounds given by using a counter
     int counter = 0;
     while (rounds >= 0){
+      counter ++;
       String thought = input.nextLine();
-      transcript.add(thought);
+      transcript[3] = (thought);
+      String Response1= thought.replaceAll("\\bI\\b", "you")
+                               .replaceAll("\\bme\\b", "you")
+                               .replaceAll("\\bam\\b", "are")
+                               .replaceAll("\\bmy\\b", "your");
+      System.out.println("\nOh you are thinking about" + " " + Response1 + " ");
+
+      System.out.println("Why are you thinking about" + " " + Response1 + ":" + " " );
+      String thought2 = input.nextLine();
+      transcript[4] = (thought2);
+      String Response2= thought2.replaceAll("\\bI\\b", "you")
+                                .replaceAll("\\bme\\b", "you")
+                                .replaceAll("\\bam\\b", "are")
+                                .replaceAll("\\bmy\\b", "your");
+      transcript[5] = (Response2);
+
     }
 
 
