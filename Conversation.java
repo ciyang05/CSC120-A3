@@ -1,8 +1,5 @@
 import java.util.*;
 import java.util.function.Supplier;
-import java.util.Scanner;
-import java.util.ArrayList;
-import java.util.Random;
 
 
 class Conversation implements Chatbot {
@@ -45,7 +42,7 @@ class Conversation implements Chatbot {
     // gets answer from user about number of rounds, initializing the transcript array
     int rounds = input.nextInt(); 
     input.nextLine(); 
-    String[] transcript = new String[2 * rounds + 3];
+    public static String[] transcript = new String[2 * rounds + 3];
 
     // convert rounds to a string
     // adds welcome message and str rounds to transcript array in respective index
@@ -60,32 +57,18 @@ class Conversation implements Chatbot {
 
 
     // loop over to ask about thoughts depending on rounds given by using a counter
-    int counter = 0;
-    while (rounds >= 0){
-      counter ++;
+    for (int i = 0; i <= rounds; i++) {
       String thought = input.nextLine();
-      transcript[3 + counter * 2] = (thought);
-      String Response1= thought.replaceAll("\\bI\\b", "you")
-                               .replaceAll("\\bme\\b", "you")
-                               .replaceAll("\\bam\\b", "are")
-                               .replaceAll("\\bmy\\b", "your");
-      System.out.println("\nOh you are thinking about" + " " + Response1 + " ");
-      transcript[4 + counter * 2] = (Response1);
-
-      // System.out.println("Why are you thinking about" + " " + Response1 + ":" + " " );
-      // String thought2 = input.nextLine();
-      // transcript[4] = (thought2);
-      // String Response2= thought2.replaceAll("\\bI\\b", "you")
-      //                           .replaceAll("\\bme\\b", "you")
-      //                           .replaceAll("\\bam\\b", "are")
-      //                           .replaceAll("\\bmy\\b", "your");
-      // transcript[5] = (Response2);
-
+      transcript[3 + i * 2] = (thought);
+      // System.out.println(thought);
+      String response = thought.replaceAll("\\bI\\b", "You")
+                               .replaceAll("\\bam\\b","are");
+      transcript[4 + i * 2] = response;
+      System.out.println(response);
     }
 
 
 
-    // Begins conversation
       }
   }
 
@@ -94,6 +77,7 @@ class Conversation implements Chatbot {
    * Would loop over and print out each statement in the arrayList transcript
    */
   public void printTranscript() {
+    System.out.println("\n" + "TRANSCRIPT" + "\n" + Arrays.toString(transcript));
 
   }
 
