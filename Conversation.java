@@ -1,6 +1,8 @@
 import java.util.*;
 import java.util.function.Supplier;
 import java.util.Scanner;
+import java.util.List;
+import java.util.Random;
 
 
 class Conversation implements Chatbot {
@@ -22,6 +24,7 @@ class Conversation implements Chatbot {
                                    "Uh-huh",
                                    "How interesting...",
                                    "Sounds good."};
+    
    }
 
   // the class and is where scanner would go 
@@ -69,6 +72,12 @@ class Conversation implements Chatbot {
       transcript[4 + i * 2] = response;
       System.out.println(response);
     }
+
+    Random random = new Random();
+    int randomIndex = random.nextInt(responses.length);
+
+    String randomResponse = responses[randomIndex];
+    System.out.println(randomResponse);
 
 
 
