@@ -31,9 +31,9 @@ class Conversation implements Chatbot {
 
   // the class and is where scanner would go 
   
-  Conversation() {
+  // Conversation() {
 
-  }
+  // }
 
   /**
    * Starts and runs the conversation with the user
@@ -62,7 +62,7 @@ class Conversation implements Chatbot {
 
 
     // loop over to ask about thoughts depending on rounds given by using a counter
-    for (int i = 0; i <= rounds; i++) {
+    for (int i = 0; i < rounds; i++) {
       String thought = input.nextLine();
       transcript.add(thought);
       // System.out.println(thought);
