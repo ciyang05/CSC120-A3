@@ -65,13 +65,12 @@ class Conversation implements Chatbot {
     for (int i = 0; i < rounds; i++) {
       String thought = input.nextLine();
       transcript.add(thought);
-      // System.out.println(thought);
       String response = thought.replaceAll("\\bI\\b", "you")
                                .replaceAll("\\bam\\b","are")
                                .replaceAll("\\bam\\b", "are")
                                .replaceAll("\\bmy\\b", "your");
       transcript.add(response);
-      System.out.println("Oh you are thinking about" + " " + response);
+      System.out.println(response);
     }
 
     Random random = new Random();
