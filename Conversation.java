@@ -1,5 +1,6 @@
 import java.util.*;
 import java.util.function.Supplier;
+import java.util.Scanner;
 
 
 class Conversation implements Chatbot {
@@ -42,7 +43,7 @@ class Conversation implements Chatbot {
     // gets answer from user about number of rounds, initializing the transcript array
     int rounds = input.nextInt(); 
     input.nextLine(); 
-    String[] transcript = new String[2 * rounds + 3];
+    String[] transcript = new String[2 * rounds + 5];
 
     // convert rounds to a string
     // adds welcome message and str rounds to transcript array in respective index
