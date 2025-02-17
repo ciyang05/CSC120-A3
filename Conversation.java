@@ -52,25 +52,25 @@ class Conversation implements Chatbot {
     // convert rounds to a string
     // adds welcome message and str rounds to transcript array in respective index
     String rounds_str = String.valueOf(rounds);
-    this.transcript.add(welcome);
-    this.transcript.add(rounds_str);
+    transcript.add(welcome);
+    transcript.add(rounds_str);
 
     // asks user to give a thought, storing it in transcript array
     String question = ("What is on your mind? ");
-    this.transcript.add(question);
+    transcript.add(question);
     System.out.println(question);
 
 
     // loop over to ask about thoughts depending on rounds given by using a counter
     for (int i = 0; i <= rounds; i++) {
       String thought = input.nextLine();
-      this.transcript.add(thought);
+      transcript.add(thought);
       // System.out.println(thought);
       String response = thought.replaceAll("\\bI\\b", "you")
                                .replaceAll("\\bam\\b","are")
                                .replaceAll("\\bam\\b", "are")
                                .replaceAll("\\bmy\\b", "your");
-      this.transcript.add(response);
+      transcript.add(response);
       System.out.println(response);
     }
 
@@ -78,20 +78,18 @@ class Conversation implements Chatbot {
     int randomIndex = random.nextInt(responses.length);
 
     String randomResponse = responses[randomIndex];
-    this.transcript.add(randomResponse);
+    transcript.add(randomResponse);
     System.out.println(randomResponse);
 
 
 
-      }
+  
   }
 
   /**
    * Prints transcript of conversation
    * Would loop over and print out each statement in the arrayList transcript
    */
-
-
 
   public void printTranscript() {
     System.out.println("\n" + "TRANSCRIPT:");
