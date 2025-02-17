@@ -8,7 +8,7 @@ Use this file to record your reflection on this assignment.
 
 1) Chiashi Yang - attended Ab's tuesday office hours 2/12 
 
-2) Kiara Sunil Singh - Attended TA hours on Wednesday and Sunday(both sessions) - Worked with Jessica and Nafisa, Attended Jordan’s office hours on Monday
+2) Kiara Sunil Singh - Attended TA hours on Wednesday and Sunday(both sessions) - Worked with Jessica and Nafisa
 
 Kiara Sunil Singh - I consulted with Chiashi Yang and Victoria Reyes
 Overall, I found this assignment to be very challenging. I often found myself looking at other resources to help myself better understand the syntax and tools that java has. The platforms I used were Stack Overflow, Geeks for Geeks, and W3 Schools. My initial impression of Java is that it is very different from python and I struggled being able to transition between the two, especially since Java isn’t as forgiving as python. However, there were some similarities that I found, for instance, the logical applications of for and while loops are the same and they both have functions/methods for things such as randomizing and inputting. I think we were able to work with github and git well. I also found that we collaborated efficiently. The things that did not work well were that it was difficult to structure the code and hard to understand how to correctly implement and run the code. My advice to future students would be to start early and collaborate as much as possible, while also using all the resources such as TA and office hours.
