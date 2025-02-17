@@ -61,8 +61,10 @@ class Conversation implements Chatbot {
       String thought = input.nextLine();
       transcript[3 + i * 2] = (thought);
       // System.out.println(thought);
-      String response = thought.replaceAll("\\bI\\b", "You")
-                               .replaceAll("\\bam\\b","are");
+      String response = thought.replaceAll("\\bI\\b", "you")
+                               .replaceAll("\\bam\\b","are")
+                               .replaceAll("\\bam\\b", "are")
+                               .replaceAll("\\bmy\\b", "your");
       transcript[4 + i * 2] = response;
       System.out.println(response);
     }
