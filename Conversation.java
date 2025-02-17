@@ -1,7 +1,4 @@
-import java.util.*;
-import java.util.function.Supplier;
 import java.util.Scanner;
-import java.util.List;
 import java.util.Random;
 import java.util.ArrayList;
 
@@ -65,10 +62,13 @@ class Conversation implements Chatbot {
     for (int i = 0; i < rounds; i++) {
       String thought = input.nextLine();
       transcript.add(thought);
-      String response = thought.replaceAll("\\bI\\b", "you")
-                               .replaceAll("\\bam\\b","are")
-                               .replaceAll("\\bam\\b", "are")
-                               .replaceAll("\\bmy\\b", "your");
+
+      String response = thought.replaceAll("\\bam\\b", "are")
+                               .replaceAll("\\bme\\b","you")
+                               .replaceAll("\\bI\\b","you")
+                               .replaceAll("\\bYou\\b", "I")
+                               .replaceAll("\\byour\\b", "my")
+                               .replaceAll("\\bMy\\b", "Your");
       transcript.add(response);
       System.out.println(response);
     }
