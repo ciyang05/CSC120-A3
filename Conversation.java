@@ -23,9 +23,9 @@ class Conversation implements Chatbot {
     this.input = new Scanner (System.in);
     this.responses = new String[] {"See you later!", 
                                    "Bye, bye!", 
-                                   "Uh-huh",
-                                   "How interesting...",
-                                   "Sounds good."};
+                                   "Goodbye!",
+                                   "Adios!"
+                                     };
     this.transcript = new ArrayList<String>();
    }
 
@@ -71,7 +71,7 @@ class Conversation implements Chatbot {
                                .replaceAll("\\bam\\b", "are")
                                .replaceAll("\\bmy\\b", "your");
       transcript.add(response);
-      System.out.println(response);
+      System.out.println("Oh you are thinking about" + " " + response);
     }
 
     Random random = new Random();
